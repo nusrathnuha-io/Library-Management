@@ -29,17 +29,14 @@ To get started with the application, follow these steps:
 
 ## Screenshots
 
-*login page*
-![Screenshot_20240507_205715-min](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/e9780a91-0bf9-4dfd-a62b-56f03504115e)
+*Login Page*
+![Login Page](https://raw.githubusercontent.com/nusrathnuha-io/Library-Management/main/assets/Screenshot_20240507_205715-min.png)
 
-*Register*
-![Screenshot_20240507_205804-min](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/d366a558-83e8-4e61-93e2-e7857751bfc4)
+*Register Page*
+![Register Page](https://raw.githubusercontent.com/nusrathnuha-io/Library-Management/main/assets/Screenshot_20240507_205804-min.png)
 
 *Dashboard*
-![Screenshot_20240507_205816-min](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/d06b60c0-ea64-409b-8d89-901f215548fa)
+![Dashboard](https://raw.githubusercontent.com/nusrathnuha-io/Library-Management/main/assets/Screenshot_20240507_205816-min.png)
 
-*Book*
-![Screenshot_20240507_210458-min](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/361c0ef9-22e5-4ad1-875e-a15e97666ce0)
-
-
-
+*Book Page*
+![Book Page](https://raw.githubusercontent.com/nusrathnuha-io/Library-Management/main/assets/Screenshot_20240507_210458-min.png)
