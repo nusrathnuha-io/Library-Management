@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1">
+
+    <!-- Heading Layout -->
+    <LinearLayout
+        android:id="@+id/headingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Icon -->
+        <ImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/members"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp" />
+
+        <!-- Heading Text -->
+        <TextView
+            android:id="@+id/textViewHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Member Information"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <!-- Member Card No -->
+    <EditText
+        android:id="@+id/editTextCardNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headingLayout"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Card No"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:inputType="text"
+        android:padding="8dp"/>
+
+    <!-- Member Name -->
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCardNo"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Member Name"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:inputType="text"
+        android:padding="8dp"/>
+
+    <!-- Member Address -->
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Member Address"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:inputType="text"
+        android:padding="8dp"/>
+
+    <!-- Member Phone -->
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText2"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Member Phone"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:inputType="phone"
+        android:padding="8dp"/>
+
+    <!-- Member Unpaid Dues -->
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editText3"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Unpaid Dues"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:inputType="numberDecimal"
+        android:padding="8dp"/>
+
+    <!-- ScrollView for Member List -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttonLayout"
+        android:layout_below="@id/editText4">
+
+        <LinearLayout
+            android:id="@+id/ListLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </ScrollView>
+
+    <!-- Button Layout -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <!-- Add Member Button -->
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add "
+            android:layout_marginEnd="10dp"/>
+
+        <!-- Delete Member Button -->
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete "
+            android:layout_marginEnd="10dp"/>
+
+        <!-- Update Member Button -->
+        <Button
+            android:id="@+id/updateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update "
+            android:layout_marginEnd="10dp"/>
+
+        <!-- Home Button -->
+        <Button
+            android:id="@+id/HomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            tools:ignore="DuplicateIds"
+            android:layout_marginEnd="10dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="editTextAuthorName" type="id" />
+    <item name="addButton" type="id" />
+    <item name="deleteButton" type="id" />
+    <item name="updateButton" type="id" />
+    <item name="scrollViewBookCopies" type="id" />
+    <item name="editText" type="id" />
+    <item name="bookCopyListLayout" type="id" />
+    <item name="editTextBranchID" type="id" />
+    <item name="editTextBookID" type="id" />
+    <item name="editText2" type="id" />
+    <item name="editTextCardNo" type="id" />
+    <item name="editTextDateOut" type="id" />
+    <item name="editTextDateDue" type="id" />
+    <item name="editTextDateReturned" type="id" />
+    <item name="editText3" type="id" />
+    <item name="editText4" type="id" />
+</resources>

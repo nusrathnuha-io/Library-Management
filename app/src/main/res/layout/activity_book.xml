@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1">
+
+    <!-- Heading Layout -->
+    <LinearLayout
+        android:id="@+id/headingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        > <!-- Set your desired background color -->
+
+        <!-- Icon -->
+        <ImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/book_24"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="10dp" /> <!-- Adjust margin as needed -->
+
+        <!-- Heading Text -->
+        <TextView
+            android:id="@+id/textViewHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Book Management"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+
+    <!-- Book ID -->
+    <EditText
+        android:id="@+id/editTextBookId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headingLayout"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Book ID"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:inputType="text"
+        android:padding="8dp"/>
+
+    <!-- Book Title -->
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextBookId"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Title"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:inputType="text"
+        android:padding="8dp"/>
+
+    <!-- Publisher Name -->
+    <EditText
+        android:id="@+id/editTextPublisher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextTitle"
+        android:layout_marginTop="16dp"
+        android:hint="Enter Publisher Name"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:inputType="text"
+        android:padding="8dp"/>
+
+    <!-- ScrollView for Book List -->
+    <ScrollView
+        android:id="@+id/scrollViewBookList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buttonLayout"
+        android:layout_below="@id/editTextPublisher"
+        >
+
+        <LinearLayout
+            android:id="@+id/bookListLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </ScrollView>
+
+    <!-- Button Layout -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <!-- Add Book Button -->
+        <Button
+            android:id="@+id/addBookButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add "
+            android:layout_marginEnd="10dp"/>
+
+        <!-- Delete Book Button -->
+        <Button
+            android:id="@+id/deleteBookButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete "
+            android:layout_marginEnd="10dp"/>
+
+        <!--update book button-->
+
+        <Button
+            android:id="@+id/updateBookButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update "
+            android:layout_marginEnd="10dp"/>
+
+        <Button
+            android:id="@+id/HomeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            tools:ignore="DuplicateIds"
+            android:layout_marginEnd="10dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
