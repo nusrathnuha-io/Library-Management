@@ -29,23 +29,18 @@ To get started with the application, follow these steps:
 
 ## Screenshots
 
-![Login Screen]
+
 ![Screenshot_20240507_205715-min](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/e9780a91-0bf9-4dfd-a62b-56f03504115e)
+![Login Screen]
 
-![Register]
 ![Screenshot_20240507_205804-min](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/d366a558-83e8-4e61-93e2-e7857751bfc4)
+![Register]
 
-![Dashboard]
 ![Screenshot_20240507_205816-min](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/d06b60c0-ea64-409b-8d89-901f215548fa)
+##Dashboard
 
-![Book]
 ![Screenshot_20240507_210458-min](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/361c0ef9-22e5-4ad1-875e-a15e97666ce0)
+![Book]
 
-## Contributing
 
-Contributions are welcome! If you find any bugs or have suggestions for improvements, feel free to open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
