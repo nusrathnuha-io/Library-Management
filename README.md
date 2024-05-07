@@ -30,7 +30,8 @@ To get started with the application, follow these steps:
 ## Screenshots
 
 ![Login Screen]
-![Screenshot_20240507_205546](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/e48eed84-435a-491f-8b2b-00d5e7d0a4b3)
+![Screenshot_20240507_205804-min](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/23e90166-2a27-4785-8ccb-a57408bab766)
+
 
 *Login Screen*
 
