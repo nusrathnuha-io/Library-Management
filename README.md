@@ -30,13 +30,16 @@ To get started with the application, follow these steps:
 ## Screenshots
 
 *Login Page*
-![Login Page](https://raw.githubusercontent.com/nusrathnuha-io/Library-Management/main/assets/Screenshot_20240507_205715-min.png)
+![Login Page](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/9ec53e14-42dd-4f3c-b61b-f04ada56dc62)
+
 
 *Register Page*
-![Register Page](https://raw.githubusercontent.com/nusrathnuha-io/Library-Management/main/assets/Screenshot_20240507_205804-min.png)
+![Register Page](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/2840aa13-84c4-4d6b-8b98-6d025e07a14e)
+
 
 *Dashboard*
-![Dashboard](https://raw.githubusercontent.com/nusrathnuha-io/Library-Management/main/assets/Screenshot_20240507_205816-min.png)
+![Dashboard](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/73b0abd2-32b3-4909-8c37-4ab49cc65e10)
 
 *Book Page*
-![Book Page](https://raw.githubusercontent.com/nusrathnuha-io/Library-Management/main/assets/Screenshot_20240507_210458-min.png)
+![Book Page](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/c98d90d3-3160-475d-b021-3e8db3b47813)
+
