@@ -14,9 +14,6 @@
         android:padding="16dp">
 
         <!-- Icon -->
-
-        <!-- Heading Text -->
-
         <ImageView
             android:id="@+id/iconImageView"
             android:layout_width="80dp"
@@ -25,6 +22,7 @@
             android:layout_marginEnd="10dp"
             android:src="@drawable/copy_books" />
 
+        <!-- Heading Text -->
         <TextView
             android:id="@+id/textViewHeading"
             android:layout_width="wrap_content"
@@ -38,51 +36,106 @@
     </LinearLayout>
 
     <!-- Book ID -->
+
+    <TextView
+        android:id="@+id/textViewBookID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headingLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:padding="8dp"
+        android:text="Book ID"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <!-- Branch ID -->
+
     <EditText
         android:id="@+id/editTextBookID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/headingLayout"
-        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewBookID"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="-44dp"
+        android:layout_marginEnd="-216dp"
+        android:layout_toEndOf="@+id/textViewBookID"
         android:hint="Enter Book ID"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
         android:inputType="text"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
 
-    <!-- Branch ID -->
+    <TextView
+        android:id="@+id/textViewBranchID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextBookID"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="-2dp"
+        android:padding="8dp"
+        android:text="Branch ID"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <!-- Access Number -->
+
     <EditText
         android:id="@+id/editTextBranchID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextBookID"
-        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewBranchID"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="-42dp"
+        android:layout_marginEnd="-92dp"
+        android:layout_toEndOf="@+id/textViewBranchID"
         android:hint="Enter Branch ID"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
         android:inputType="text"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
 
-    <!-- Access Number -->
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textViewAccessNumber"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextBranchID"
-        android:layout_marginTop="16dp"
-        android:hint="Enter Access Number"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-4dp"
+        android:padding="8dp"
+        android:text="Number"
         android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
-        android:inputType="text"
-        android:padding="8dp"/>
+        android:textSize="18sp" />
 
     <!-- ScrollView for Book Copy List -->
+
+    <EditText
+        android:id="@+id/editTextAccessNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewAccessNumber"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginEnd="-155dp"
+        android:layout_toEndOf="@+id/textViewAccessNumber"
+        android:hint="Enter Access Number"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
     <ScrollView
         android:id="@+id/scrollViewBookCopies"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/buttonLayout"
-        android:layout_below="@id/editText">
+        android:layout_below="@id/editTextAccessNumber">
 
         <LinearLayout
             android:id="@+id/bookCopyListLayout"
@@ -126,15 +179,12 @@
             android:layout_marginEnd="10dp"/>
 
         <Button
-
             android:id="@+id/HomeButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Home"
             tools:ignore="DuplicateIds"
             android:layout_marginEnd="10dp"/>
-
-
     </LinearLayout>
 
 </RelativeLayout>

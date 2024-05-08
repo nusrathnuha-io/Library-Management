@@ -30,7 +30,7 @@ public class LendingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lending);
 
-        editTextAccessNo = findViewById(R.id.editText);
+        editTextAccessNo = findViewById(R.id.editTextAccessNumber);
         editTextBranchID = findViewById(R.id.editTextBranchID);
         editTextCardNo = findViewById(R.id.editTextCardNo);
         editTextDateOut = findViewById(R.id.editTextDateOut);

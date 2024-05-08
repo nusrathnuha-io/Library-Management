@@ -36,82 +36,188 @@
     </LinearLayout>
 
     <!-- Access Number -->
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textViewAccessNumber"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/headingLayout"
         android:layout_marginTop="16dp"
-        android:hint="Enter Access Number"
+        android:text=" A Number"
         android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
-        android:inputType="text"
+        android:textSize="18sp"
         android:padding="8dp"/>
 
     <!-- Branch ID -->
+
+    <!-- Card Number -->
+
+    <EditText
+        android:id="@+id/editTextAccessNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewAccessNumber"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginEnd="-112dp"
+        android:layout_toEndOf="@+id/textViewAccessNumber"
+        android:hint="Enter Access Number"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textViewBranchID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAccessNumber"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="Branch ID"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <!-- Date Out -->
+
     <EditText
         android:id="@+id/editTextBranchID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editText"
-        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewBranchID"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="-43dp"
+        android:layout_marginEnd="-119dp"
+        android:layout_toEndOf="@+id/textViewBranchID"
         android:hint="Enter Branch ID"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
         android:inputType="text"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
 
-    <!-- Card Number -->
+    <TextView
+        android:id="@+id/textViewCardNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextBranchID"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="2dp"
+        android:padding="8dp"
+        android:text="Card Number"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <!-- Date Due -->
+
     <EditText
         android:id="@+id/editTextCardNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextBranchID"
-        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewCardNo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="-34dp"
+        android:layout_marginEnd="-126dp"
+        android:layout_toEndOf="@+id/textViewCardNo"
         android:hint="Enter Card Number"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
         android:inputType="text"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
 
-    <!-- Date Out -->
+    <TextView
+        android:id="@+id/textViewDateOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCardNo"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-4dp"
+        android:padding="8dp"
+        android:text="Date Out"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
     <EditText
         android:id="@+id/editTextDateOut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextCardNo"
-        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewDateOut"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="-42dp"
+        android:layout_marginEnd="-119dp"
+        android:layout_toEndOf="@+id/textViewDateOut"
         android:hint="Enter Date Out"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
         android:inputType="date"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
 
-    <!-- Date Due -->
+    <TextView
+        android:id="@+id/textViewDateDue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDateOut"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:padding="8dp"
+        android:text="Date Due"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <!-- Date Returned -->
+
     <EditText
         android:id="@+id/editTextDateDue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextDateOut"
-        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewDateDue"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="-46dp"
+        android:layout_marginEnd="-130dp"
+        android:layout_toEndOf="@+id/textViewDateDue"
         android:hint="Enter Date Due"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
         android:inputType="date"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
 
-    <!-- Date Returned -->
+    <TextView
+        android:id="@+id/textViewDateReturned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDateDue"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
+        android:padding="8dp"
+        android:text="Date Returned"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
     <EditText
         android:id="@+id/editTextDateReturned"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextDateDue"
-        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewDateReturned"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="-44dp"
+        android:layout_marginEnd="-132dp"
+        android:layout_toEndOf="@+id/textViewDateReturned"
         android:hint="Enter Date Returned"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
         android:inputType="date"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"

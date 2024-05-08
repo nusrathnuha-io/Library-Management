@@ -36,51 +36,99 @@
     </LinearLayout>
 
     <!-- Branch ID -->
+    <TextView
+        android:id="@+id/textViewBranchID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headingLayout"
+        android:layout_marginTop="16dp"
+        android:text=" ID"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:padding="8dp"/>
+
+    <!-- Branch Name -->
+
     <EditText
         android:id="@+id/editTextBranchID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/headingLayout"
-        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewBranchID"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="-41dp"
+        android:layout_marginEnd="-148dp"
+        android:layout_toEndOf="@+id/textViewBranchID"
         android:hint="Enter Branch ID"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
         android:inputType="text"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
 
-    <!-- Branch Name -->
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textViewBranchName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextBranchID"
         android:layout_marginTop="16dp"
-        android:hint="Enter Branch Name"
+        android:text=" Name"
         android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
-        android:inputType="text"
+        android:textSize="18sp"
         android:padding="8dp"/>
 
     <!-- Branch Address -->
+
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editTextBranchName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editText"
-        android:layout_marginTop="16dp"
-        android:hint="Enter Branch Address"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
+        android:layout_below="@id/textViewBranchName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginEnd="-149dp"
+        android:layout_toEndOf="@+id/textViewBranchName"
+        android:hint="Enter Branch Name"
         android:inputType="text"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textViewBranchAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextBranchName"
+        android:layout_marginTop="16dp"
+        android:text=" Address"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
         android:padding="8dp"/>
 
     <!-- ScrollView for Branch List -->
+
+    <EditText
+        android:id="@+id/editTextBranchAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewBranchAddress"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="-44dp"
+        android:layout_marginEnd="-97dp"
+        android:layout_toEndOf="@+id/textViewBranchAddress"
+        android:hint="Enter Branch Address"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/buttonLayout"
-        android:layout_below="@id/editText2">
+        android:layout_below="@id/editTextBranchAddress">
 
         <LinearLayout
             android:id="@+id/ListLayout"

@@ -33,8 +33,8 @@ public class BranchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_branch);
 
         editTextBranchID = findViewById(R.id.editTextBranchID);
-        editTextBranchName = findViewById(R.id.editText);
-        editTextBranchAddress = findViewById(R.id.editText2);
+        editTextBranchName = findViewById(R.id.editTextBranchName);
+        editTextBranchAddress = findViewById(R.id.editTextBranchAddress);
         addBranchButton = findViewById(R.id.addButton);
         deleteBranchButton = findViewById(R.id.deleteButton);
         updateBranchButton = findViewById(R.id.updateButton);

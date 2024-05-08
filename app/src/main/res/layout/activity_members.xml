@@ -36,77 +36,166 @@
     </LinearLayout>
 
     <!-- Member Card No -->
+
+    <TextView
+        android:id="@+id/textViewCardNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headingLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:padding="8dp"
+        android:text="Card No"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <!-- Member Name -->
+
     <EditText
         android:id="@+id/editTextCardNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/headingLayout"
-        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewCardNo"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="-44dp"
+        android:layout_marginEnd="-118dp"
+        android:layout_toEndOf="@+id/textViewCardNo"
         android:hint="Enter Card No"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
         android:inputType="text"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
 
-    <!-- Member Name -->
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextCardNo"
-        android:layout_marginTop="16dp"
-        android:hint="Enter Member Name"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="2dp"
+        android:padding="8dp"
+        android:text=" Name"
         android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
-        android:inputType="text"
-        android:padding="8dp"/>
+        android:textSize="18sp" />
 
     <!-- Member Address -->
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/editText"
-        android:layout_marginTop="16dp"
-        android:hint="Enter Member Address"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
-        android:inputType="text"
-        android:padding="8dp"/>
 
     <!-- Member Phone -->
+
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editText2"
-        android:layout_marginTop="16dp"
-        android:hint="Enter Member Phone"
+        android:layout_below="@id/textViewName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="-48dp"
+        android:layout_marginEnd="-116dp"
+        android:layout_toEndOf="@+id/textViewName"
+        android:hint="Enter Member Name"
+        android:inputType="text"
+        android:padding="8dp"
         android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
-        android:inputType="phone"
-        android:padding="8dp"/>
+        android:textColorHint="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textViewAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextName"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="4dp"
+        android:padding="8dp"
+        android:text=" Address"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
     <!-- Member Unpaid Dues -->
+
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/editTextAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editText3"
-        android:layout_marginTop="16dp"
-        android:hint="Enter Unpaid Dues"
+        android:layout_below="@id/textViewAddress"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="-46dp"
+        android:layout_marginEnd="-118dp"
+        android:layout_toEndOf="@+id/textViewAddress"
+        android:hint="Enter Member Address"
+        android:inputType="text"
+        android:padding="8dp"
         android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
-        android:inputType="numberDecimal"
-        android:padding="8dp"/>
+        android:textColorHint="@android:color/black" />
 
-    <!-- ScrollView for Member List -->
+    <TextView
+        android:id="@+id/textViewPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextAddress"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="-2dp"
+        android:padding="8dp"
+        android:text=" Phone"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewPhone"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="-44dp"
+        android:layout_marginEnd="-108dp"
+        android:layout_toEndOf="@+id/textViewPhone"
+        android:hint="Enter Member Phone"
+        android:inputType="phone"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textViewUnpaidDues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPhone"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="Unpaid Dues"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextUnpaidDues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewUnpaidDues"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="-42dp"
+        android:layout_marginEnd="-200dp"
+        android:layout_toEndOf="@+id/textViewUnpaidDues"
+        android:hint="Enter Unpaid Dues"
+        android:inputType="numberDecimal"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/buttonLayout"
-        android:layout_below="@id/editText4">
+        android:layout_below="@id/editTextUnpaidDues">
 
         <LinearLayout
             android:id="@+id/ListLayout"
@@ -130,7 +219,7 @@
             android:id="@+id/addButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add "
+            android:text="Add"
             android:layout_marginEnd="10dp"/>
 
         <!-- Delete Member Button -->
@@ -138,7 +227,7 @@
             android:id="@+id/deleteButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete "
+            android:text="Delete"
             android:layout_marginEnd="10dp"/>
 
         <!-- Update Member Button -->
@@ -146,7 +235,7 @@
             android:id="@+id/updateButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Update "
+            android:text="Update"
             android:layout_marginEnd="10dp"/>
 
         <!-- Home Button -->

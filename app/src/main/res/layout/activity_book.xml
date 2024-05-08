@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background1">
 
     <!-- Heading Layout -->
@@ -37,45 +38,108 @@
     </LinearLayout>
 
     <!-- Book ID -->
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="118dp"
+        android:padding="8dp"
+        android:text="Book ID"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="89dp" />
+
+    <!-- Book iD -->
+
+    <!--title-->
+
+
+    <!-- Publisher Name -->
+
+    <!-- ScrollView for Book List -->
+
     <EditText
         android:id="@+id/editTextBookId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/headingLayout"
-        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:layout_toEndOf="@+id/textView3"
         android:hint="Enter Book ID"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
         android:inputType="text"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
 
-    <!-- Book Title -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="168dp"
+        android:padding="8dp"
+        android:text="Tittle"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="89dp" />
+
     <EditText
         android:id="@+id/editTextTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextBookId"
-        android:layout_marginTop="16dp"
-        android:hint="Enter Title"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
-        android:inputType="text"
-        android:padding="8dp"/>
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
 
-    <!-- Publisher Name -->
+        android:layout_toEndOf="@+id/textView4"
+        android:hint="Enter Title"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="220dp"
+        android:padding="8dp"
+        android:text="publisher"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="89dp" />
+
     <EditText
         android:id="@+id/editTextPublisher"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextTitle"
-        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="14dp"
+        android:layout_toEndOf="@+id/textView4"
         android:hint="Enter Publisher Name"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
         android:inputType="text"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
 
-    <!-- ScrollView for Book List -->
     <ScrollView
         android:id="@+id/scrollViewBookList"
         android:layout_width="match_parent"
@@ -88,7 +152,9 @@
             android:id="@+id/bookListLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"/>
+            android:orientation="vertical">
+
+        </LinearLayout>
 
     </ScrollView>
 
@@ -135,5 +201,8 @@
             android:layout_marginEnd="10dp" />
 
     </LinearLayout>
+
+
+
 
 </RelativeLayout>

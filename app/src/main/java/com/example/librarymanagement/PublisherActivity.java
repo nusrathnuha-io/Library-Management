@@ -30,9 +30,9 @@ public class PublisherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_publisher);
 
-        editTextPublisherName = findViewById(R.id.editText);
-        editTextPublisherAddress = findViewById(R.id.editText2);
-        editTextPublisherPhone = findViewById(R.id.editText3);
+        editTextPublisherName = findViewById(R.id.editTextPublisherName);
+        editTextPublisherAddress = findViewById(R.id.editTextPublisherAddress);
+        editTextPublisherPhone = findViewById(R.id.editTextPublisherPhone);
         addButton = findViewById(R.id.addButton);
         deleteButton = findViewById(R.id.deleteButton);
         updateButton = findViewById(R.id.updateButton);

@@ -31,7 +31,7 @@ public class BookCopyActivity extends AppCompatActivity {
 
         editTextBookID = findViewById(R.id.editTextBookID);
         editTextBranchID = findViewById(R.id.editTextBranchID);
-        editTextAccessNo = findViewById(R.id.editText);
+        editTextAccessNo = findViewById(R.id.editTextAccessNumber);
         addButton = findViewById(R.id.addButton);
         deleteButton = findViewById(R.id.deleteButton);
         updateButton = findViewById(R.id.updateButton);

@@ -47,32 +47,53 @@
         android:textSize="18sp"
         android:padding="8dp"/>
 
+    <!-- Author Name -->
+
     <EditText
         android:id="@+id/editTextBookId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textViewBookId"
-        android:layout_marginTop="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="-42dp"
+        android:layout_marginEnd="-132dp"
+        android:layout_toEndOf="@+id/textViewBookId"
         android:hint="Enter Book ID"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
         android:inputType="text"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textViewAuthorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextBookId"
+        android:layout_marginTop="16dp"
+        android:text="Author Name"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
         android:padding="8dp"/>
 
-    <!-- Author Name -->
+    <!-- ScrollView for Book List -->
+
     <EditText
         android:id="@+id/editTextAuthorName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTextBookId"
-        android:layout_marginTop="16dp"
+        android:layout_below="@id/textViewAuthorName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginEnd="-133dp"
+        android:layout_toEndOf="@+id/textViewAuthorName"
         android:hint="Enter Author Name"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
         android:inputType="text"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
 
-    <!-- ScrollView for Book List -->
     <ScrollView
         android:id="@+id/scrollViewBookList"
         android:layout_width="match_parent"

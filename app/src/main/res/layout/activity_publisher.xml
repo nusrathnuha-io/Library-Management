@@ -36,51 +36,101 @@
     </LinearLayout>
 
     <!-- Publisher Name -->
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/textViewPublisherName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/headingLayout"
         android:layout_marginTop="16dp"
-        android:hint="Enter Publisher Name"
+        android:text=" Name"
         android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
-        android:inputType="text"
+        android:textSize="18sp"
         android:padding="8dp"/>
 
     <!-- Publisher Address -->
+
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editTextPublisherName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editText"
-        android:layout_marginTop="16dp"
-        android:hint="Enter Publisher Address"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
+        android:layout_below="@id/textViewPublisherName"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="-44dp"
+        android:layout_marginEnd="-92dp"
+        android:layout_toEndOf="@+id/textViewPublisherName"
+        android:hint="Enter Publisher Name"
         android:inputType="text"
-        android:padding="8dp"/>
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
+    <TextView
+        android:id="@+id/textViewPublisherAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPublisherName"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="6dp"
+        android:padding="8dp"
+        android:text=" Address"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
 
     <!-- Publisher Phone -->
+
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editTextPublisherAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editText2"
-        android:layout_marginTop="16dp"
-        android:hint="Enter Publisher Phone"
+        android:layout_below="@id/textViewPublisherAddress"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="-42dp"
+        android:layout_marginEnd="-116dp"
+        android:layout_toEndOf="@+id/textViewPublisherAddress"
+        android:hint="Enter Publisher Address"
+        android:inputType="text"
+        android:padding="8dp"
         android:textColor="@android:color/black"
-        android:textColorHint="@android:color/black"
-        android:inputType="phone"
-        android:padding="8dp"/>
+        android:textColorHint="@android:color/black" />
 
-    <!-- ScrollView for Publisher List -->
+    <TextView
+        android:id="@+id/textViewPublisherPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextPublisherAddress"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="7dp"
+        android:padding="8dp"
+        android:text=" Phone"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextPublisherPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewPublisherPhone"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="-40dp"
+        android:layout_marginEnd="-109dp"
+        android:layout_toEndOf="@+id/textViewPublisherPhone"
+        android:hint="Enter Publisher Phone"
+        android:inputType="phone"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black" />
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/buttonLayout"
-        android:layout_below="@id/editText3">
+        android:layout_below="@id/editTextPublisherPhone">
 
         <LinearLayout
             android:id="@+id/ListLayout"
@@ -104,7 +154,7 @@
             android:id="@+id/addButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add "
+            android:text="Add"
             android:layout_marginEnd="10dp"/>
 
         <!-- Delete Publisher Button -->
@@ -112,7 +162,7 @@
             android:id="@+id/deleteButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete "
+            android:text="Delete"
             android:layout_marginEnd="10dp"/>
 
         <!-- Update Publisher Button -->
@@ -120,7 +170,7 @@
             android:id="@+id/updateButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Update "
+            android:text="Update"
             android:layout_marginEnd="10dp"/>
 
         <!-- Home Button -->
@@ -129,7 +179,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Home"
-            tools:ignore="DuplicateIds" />
+            tools:ignore="DuplicateIds"
+            android:layout_marginEnd="10dp"/>
 
     </LinearLayout>
 

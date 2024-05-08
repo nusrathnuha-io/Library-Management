@@ -35,10 +35,10 @@ public class membersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_members);
 
         editTextCardNo = findViewById(R.id.editTextCardNo);
-        editTextName = findViewById(R.id.editText);
-        editTextAddress = findViewById(R.id.editText2);
-        editTextPhone = findViewById(R.id.editText3);
-        editTextUnpaidDues = findViewById(R.id.editText4);
+        editTextName = findViewById(R.id.editTextName);
+        editTextAddress = findViewById(R.id.editTextAddress);
+        editTextPhone = findViewById(R.id.editTextPhone);
+        editTextUnpaidDues = findViewById(R.id.editTextUnpaidDues);
         addButton = findViewById(R.id.addButton);
         deleteButton = findViewById(R.id.deleteButton);
         updateButton = findViewById(R.id.updateButton);
