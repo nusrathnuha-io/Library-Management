@@ -1,7 +1,5 @@
 package com.example.librarymanagement;
 
-
-
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
@@ -77,8 +75,17 @@ public class AuthorActivity extends AppCompatActivity {
 
     private void addBookAuthor() {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        // Check if the provided Book ID exists in the Book table
+        String bookId = editTextBookId.getText().toString();
+        if (!isBookExists(db, bookId)) {
+            Toast.makeText(this, "Book ID does not exist", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Proceed with adding the book author
         ContentValues values = new ContentValues();
-        values.put("BOOK_ID", editTextBookId.getText().toString());
+        values.put("BOOK_ID", bookId);
         values.put("AUTHOR_NAME", editTextAuthorName.getText().toString());
         long newRowId = db.insert("Book_Author", null, values);
         if (newRowId == -1) {
@@ -104,10 +111,19 @@ public class AuthorActivity extends AppCompatActivity {
 
     private void updateBookAuthor() {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        // Check if the provided Book ID exists in the Book table
+        String bookId = editTextBookId.getText().toString();
+        if (!isBookExists(db, bookId)) {
+            Toast.makeText(this, "Book ID does not exist", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Proceed with updating the book author
         ContentValues values = new ContentValues();
         values.put("AUTHOR_NAME", editTextAuthorName.getText().toString());
         String selection = "BOOK_ID = ?";
-        String[] selectionArgs = {editTextBookId.getText().toString()};
+        String[] selectionArgs = {bookId};
         int count = db.update(
                 "Book_Author",
                 values,
@@ -120,6 +136,23 @@ public class AuthorActivity extends AppCompatActivity {
             displayBooks();
         }
     }
+
+    // Helper method to check if a book with the given ID exists in the Book table
+    private boolean isBookExists(SQLiteDatabase db, String bookId) {
+        Cursor cursor = db.query(
+                "Book",
+                new String[]{"BOOK_ID"},
+                "BOOK_ID = ?",
+                new String[]{bookId},
+                null,
+                null,
+                null
+        );
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        return exists;
+    }
+
 
     private void displayBooks() {
         SQLiteDatabase db = dbHelper.getReadableDatabase();

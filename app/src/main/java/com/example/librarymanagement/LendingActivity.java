@@ -83,10 +83,27 @@ public class LendingActivity extends AppCompatActivity {
 
     private void addBookLoan() {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        // Check if the provided Access Number and Branch ID exist in the Book_Copy table
+        String accessNo = editTextAccessNo.getText().toString();
+        String branchId = editTextBranchID.getText().toString();
+        if (!isBookCopyExists(db, accessNo, branchId)) {
+            Toast.makeText(this, "Access Number and/or Branch ID do not exist", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Check if the provided Card Number exists in the Member table
+        String cardNo = editTextCardNo.getText().toString();
+        if (!isMemberExists(db, cardNo)) {
+            Toast.makeText(this, "Card Number does not exist", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Proceed with adding the book loan
         ContentValues values = new ContentValues();
-        values.put("ACCESS_NO", editTextAccessNo.getText().toString());
-        values.put("BRANCH_ID", editTextBranchID.getText().toString());
-        values.put("CARD_NO", editTextCardNo.getText().toString());
+        values.put("ACCESS_NO", accessNo);
+        values.put("BRANCH_ID", branchId);
+        values.put("CARD_NO", cardNo);
         values.put("DATE_OUT", editTextDateOut.getText().toString());
         values.put("DATE_DUE", editTextDateDue.getText().toString());
         values.put("DATE_RETURNED", editTextDateReturned.getText().toString());
@@ -98,6 +115,81 @@ public class LendingActivity extends AppCompatActivity {
             displayBookLoans();
         }
     }
+
+    private void updateBookLoan() {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        // Check if the provided Access Number and Branch ID exist in the Book_Copy table
+        String accessNo = editTextAccessNo.getText().toString();
+        String branchId = editTextBranchID.getText().toString();
+        if (!isBookCopyExists(db, accessNo, branchId)) {
+            Toast.makeText(this, "Access Number and/or Branch ID do not exist", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Check if the provided Card Number exists in the Member table
+        String cardNo = editTextCardNo.getText().toString();
+        if (!isMemberExists(db, cardNo)) {
+            Toast.makeText(this, "Card Number does not exist", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Proceed with updating the book loan
+        ContentValues values = new ContentValues();
+        values.put("CARD_NO", cardNo);
+        values.put("DATE_DUE", editTextDateDue.getText().toString());
+        values.put("DATE_RETURNED", editTextDateReturned.getText().toString());
+        String selection = "ACCESS_NO = ? AND BRANCH_ID = ? AND DATE_OUT = ?";
+        String[] selectionArgs = {
+                accessNo,
+                branchId,
+                editTextDateOut.getText().toString()
+        };
+        int count = db.update(
+                "Book_Loan",
+                values,
+                selection,
+                selectionArgs);
+        if (count == 0) {
+            Toast.makeText(this, "No book loan found with the given details", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Book loan updated successfully", Toast.LENGTH_SHORT).show();
+            displayBookLoans();
+        }
+    }
+
+    // Helper method to check if a book copy with the given Access Number and Branch ID exists in the Book_Copy table
+    private boolean isBookCopyExists(SQLiteDatabase db, String accessNo, String branchId) {
+        Cursor cursor = db.query(
+                "Book_Copy",
+                new String[]{"ACCESS_NO", "BRANCH_ID"},
+                "ACCESS_NO = ? AND BRANCH_ID = ?",
+                new String[]{accessNo, branchId},
+                null,
+                null,
+                null
+        );
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        return exists;
+    }
+
+    // Helper method to check if a member with the given Card Number exists in the Member table
+    private boolean isMemberExists(SQLiteDatabase db, String cardNo) {
+        Cursor cursor = db.query(
+                "Member",
+                new String[]{"CARD_NO"},
+                "CARD_NO = ?",
+                new String[]{cardNo},
+                null,
+                null,
+                null
+        );
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        return exists;
+    }
+
 
     private void deleteBookLoan() {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
@@ -117,30 +209,7 @@ public class LendingActivity extends AppCompatActivity {
         }
     }
 
-    private void updateBookLoan() {
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put("CARD_NO", editTextCardNo.getText().toString());
-        values.put("DATE_DUE", editTextDateDue.getText().toString());
-        values.put("DATE_RETURNED", editTextDateReturned.getText().toString());
-        String selection = "ACCESS_NO = ? AND BRANCH_ID = ? AND DATE_OUT = ?";
-        String[] selectionArgs = {
-                editTextAccessNo.getText().toString(),
-                editTextBranchID.getText().toString(),
-                editTextDateOut.getText().toString()
-        };
-        int count = db.update(
-                "Book_Loan",
-                values,
-                selection,
-                selectionArgs);
-        if (count == 0) {
-            Toast.makeText(this, "No book loan found with the given details", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Book loan updated successfully", Toast.LENGTH_SHORT).show();
-            displayBookLoans();
-        }
-    }
+
 
     @SuppressLint("SetTextI18n")
     private void displayBookLoans() {

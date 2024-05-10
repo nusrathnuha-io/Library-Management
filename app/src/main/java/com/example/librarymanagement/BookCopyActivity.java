@@ -77,9 +77,25 @@ public class BookCopyActivity extends AppCompatActivity {
 
     private void addBookCopy() {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        // Check if the provided Book ID exists in the Book table
+        String bookId = editTextBookID.getText().toString();
+        if (!isBookExists(db, bookId)) {
+            Toast.makeText(this, "Book ID does not exist", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Check if the provided Branch ID exists in the Branch table
+        String branchId = editTextBranchID.getText().toString();
+        if (!isBranchExists(db, branchId)) {
+            Toast.makeText(this, "Branch ID does not exist", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Proceed with adding the book copy
         ContentValues values = new ContentValues();
-        values.put("BOOK_ID", editTextBookID.getText().toString());
-        values.put("BRANCH_ID", editTextBranchID.getText().toString());
+        values.put("BOOK_ID", bookId);
+        values.put("BRANCH_ID", branchId);
         values.put("ACCESS_NO", editTextAccessNo.getText().toString());
         long newRowId = db.insert("Book_Copy", null, values);
         if (newRowId == -1) {
@@ -88,6 +104,73 @@ public class BookCopyActivity extends AppCompatActivity {
             Toast.makeText(this, "Book copy added successfully", Toast.LENGTH_SHORT).show();
             displayBookCopies();
         }
+    }
+
+    private void updateBookCopy() {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        // Check if the provided Book ID exists in the Book table
+        String bookId = editTextBookID.getText().toString();
+        if (!isBookExists(db, bookId)) {
+            Toast.makeText(this, "Book ID does not exist", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Check if the provided Branch ID exists in the Branch table
+        String branchId = editTextBranchID.getText().toString();
+        if (!isBranchExists(db, branchId)) {
+            Toast.makeText(this, "Branch ID does not exist", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Proceed with updating the book copy
+        ContentValues values = new ContentValues();
+        values.put("BOOK_ID", bookId);
+        String selection = "ACCESS_NO = ? AND BRANCH_ID = ?";
+        String[] selectionArgs = {editTextAccessNo.getText().toString(), branchId};
+        int count = db.update(
+                "Book_Copy",
+                values,
+                selection,
+                selectionArgs);
+        if (count == 0) {
+            Toast.makeText(this, "No book copy found with the given Access Number and Branch ID", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Book copy updated successfully", Toast.LENGTH_SHORT).show();
+            displayBookCopies();
+        }
+    }
+
+    // Helper method to check if a book with the given ID exists in the Book table
+    private boolean isBookExists(SQLiteDatabase db, String bookId) {
+        Cursor cursor = db.query(
+                "Book",
+                new String[]{"BOOK_ID"},
+                "BOOK_ID = ?",
+                new String[]{bookId},
+                null,
+                null,
+                null
+        );
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        return exists;
+    }
+
+    // Helper method to check if a branch with the given ID exists in the Branch table
+    private boolean isBranchExists(SQLiteDatabase db, String branchId) {
+        Cursor cursor = db.query(
+                "Branch",
+                new String[]{"BRANCH_ID"},
+                "BRANCH_ID = ?",
+                new String[]{branchId},
+                null,
+                null,
+                null
+        );
+        boolean exists = cursor.getCount() > 0;
+        cursor.close();
+        return exists;
     }
 
     private void deleteBookCopy() {
@@ -103,24 +186,7 @@ public class BookCopyActivity extends AppCompatActivity {
         }
     }
 
-    private void updateBookCopy() {
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        ContentValues values = new ContentValues();
-        values.put("BOOK_ID", editTextBookID.getText().toString());
-        String selection = "ACCESS_NO = ? AND BRANCH_ID = ?";
-        String[] selectionArgs = {editTextAccessNo.getText().toString(), editTextBranchID.getText().toString()};
-        int count = db.update(
-                "Book_Copy",
-                values,
-                selection,
-                selectionArgs);
-        if (count == 0) {
-            Toast.makeText(this, "No book copy found with the given Access Number and Branch ID", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Book copy updated successfully", Toast.LENGTH_SHORT).show();
-            displayBookCopies();
-        }
-    }
+
 
     private void displayBookCopies() {
         SQLiteDatabase db = dbHelper.getReadableDatabase();
