@@ -75,7 +75,7 @@ Publisher details store in the database
 ![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/cb30ef06-aa22-498e-ba4a-36576a6fdd47)
 *Branch*
 
-![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/fa654966-49f8-4903-ad22-a3aa5d97b942)
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/d9e2c45f-e262-4833-9e0b-849b806227ca)
 
 Branch details store in the database
 ![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/371dcefc-8445-4926-80e1-134f8fcff5f0)
@@ -83,10 +83,13 @@ Branch details store in the database
 
 *Lending details*
 
-![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/1254736f-2ed6-49c8-b0ce-995fa5514d99)
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/d989f836-3e22-493c-b18f-bac3921df2c9)
+
 
 Lending details store in the database
 ![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/bd3a9dce-7b0d-4557-bf21-5c3cce72fa42)
+
+
 *Book copy*
 
 ![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/493511ac-a342-4a5f-9dd2-447784c84838)
