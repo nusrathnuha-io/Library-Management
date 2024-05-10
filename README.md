@@ -35,6 +35,7 @@ To get started with the application, follow these steps:
 
 *Register Page*
 ![Register Page](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/2840aa13-84c4-4d6b-8b98-6d025e07a14e)
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/8e9446dc-0986-4039-9644-ebc96517f3d2)
 
 
 *Dashboard*
@@ -45,6 +46,46 @@ To get started with the application, follow these steps:
 
 https://github.com/nusrathnuha-io/Library-Management/assets/136910478/82c3766c-d2a3-402e-b410-44ef9dc47d36
 
+Book
+ ![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/e516d2e1-1328-493e-96a2-15394d8d5f8c)
 
+Book details store in the database
+
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/e3ae88d0-03ec-4efc-b867-5b586ba567bb)
+
+ Member
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/280da945-e4c9-4e71-bd81-11bc2e023705)
+
+member details store in the database
+
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/14c2812b-01bd-4213-b6f6-0d118456f82e)
+
+Author
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/3bc2ae4e-502b-4648-ad01-d64154a83db7)
+Author details store in the database
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/4a5e3574-2185-4203-a2d5-1bc2386e96c4)
+
+Publisher
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/753389bf-2623-4fff-8b46-2dccb26a38e9)
+
+Publisher details store in the database
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/cb30ef06-aa22-498e-ba4a-36576a6fdd47)
+
+Branch
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/fa654966-49f8-4903-ad22-a3aa5d97b942)
+
+Branch details store in the database
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/371dcefc-8445-4926-80e1-134f8fcff5f0)
+
+Lending details
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/0694864b-38b1-489f-83b2-6aa1598bd42f)
+Lending details store in the database
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/bd3a9dce-7b0d-4557-bf21-5c3cce72fa42)
+
+Book copy
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/493511ac-a342-4a5f-9dd2-447784c84838)
+
+Book copy details store in the database
+![image](https://github.com/nusrathnuha-io/Library-Management/assets/136910478/358bdfec-3918-40f4-b49d-0c8a5f12e453)
 
 
